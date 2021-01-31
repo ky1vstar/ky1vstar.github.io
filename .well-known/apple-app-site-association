@@ -1,15 +1,18 @@
 {
-    "applinks": {
-        "apps": [],
-        "details": [
-	        {
-	            "appID": "VD564V38Z7.com.branchfire.folia.mobile",
-	            "paths": ["/samlOkta]
-	        },
-	        {
-	            "appID": "VD564V38Z7.com.branchfire.folia.mobile.qa",
-	            "paths": ["/samlOkta]
-	        }
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "VD564V38Z7.com.branchfire.folia.mobile",
+          "VD564V38Z7.com.branchfire.folia.mobile.qa"
+        ],
+        "components": [
+          {
+            "/": "/samlOkta"
+          }
         ]
-    }
+      }
+    ]
+  }
 }
