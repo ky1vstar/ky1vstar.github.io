@@ -1,20 +1,17 @@
 <script>
 function goto(url, fallback) {
-    var xmlhttp=new XMLHttpRequest();
-    xmlhttp.open('GET', url, false);
-    try {
-        xmlhttp.send(null);                  // Send the request now
-    } catch (e) {
-        document.location = fallback;
-        return;
-    }
+    var script = document.createElement('script'); 
 
-    // Throw an error if the request was not 200 OK 
-    if (xmlhttp.status === 200) {
+    script.onload = function() { 
         document.location = url;
-    } else {
-        document.location = fallback;
-    }
+    } 
+    script.onerror = function() { 
+        alert("failed");
+    } 
+    script.setAttribute('src', url); 
+
+    document.getElementsByTagName('head')[0].appendChild(script);
+
 }
 goto("foliaapp://", "https://kailash.folia.com");
 </script>
