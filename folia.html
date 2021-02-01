@@ -21,5 +21,7 @@ function goto(url, fallback) {
     
 const urlParams = new URLSearchParams(window.location.search);
 const scheme = urlParams.get('scheme');
-goto(scheme + ":", "https://kailash.folia.com");
+setTimeout(function() {
+    goto(scheme + ":", "https://kailash.folia.com");
+}, 2000);
 </script>
