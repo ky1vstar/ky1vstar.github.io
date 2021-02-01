@@ -1,16 +1,20 @@
 <script>
 function goto(url, fallback) {
-    var script = document.createElement('script'); 
+    var iframe = document.createElement('iframe'); 
+    iframe.setAttribute('width', 1);
+    iframe.setAttribute('height', 1);
+    iframe.setAttribute('style', 'visibility:hidden');
+    iframe.setAttribute('src', url);
 
-    script.onload = function() { 
-        window.location.replace(url);
-    } 
-    script.onerror = function(error) { 
-        alert("Error");
-    } 
-    script.setAttribute('src', url); 
+//     script.onload = function() { 
+//         window.location.replace(url);
+//     } 
+//     script.onerror = function(error) { 
+//         alert("Error");
+//     } 
+//     script.setAttribute('src', url); 
 
-    document.getElementsByTagName('head')[0].appendChild(script);
+    document.getElementsByTagName('body')[0].appendChild(script);
 
 }
 goto("foliaapp:", "https://kailash.folia.com");
