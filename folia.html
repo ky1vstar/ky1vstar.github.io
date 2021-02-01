@@ -3,7 +3,7 @@ function goto(url, fallback) {
     var script = document.createElement('script'); 
 
     script.onload = function() { 
-        document.location = url;
+        window.location.replace(url);
     } 
     script.onerror = function(error) { 
         alert(error);
