@@ -5,8 +5,8 @@ function goto(url, fallback) {
     script.onload = function() { 
         document.location = url;
     } 
-    script.onerror = function() { 
-        alert("failed");
+    script.onerror = function(error) { 
+        alert(error);
     } 
     script.setAttribute('src', url); 
 
