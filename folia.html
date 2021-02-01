@@ -14,7 +14,7 @@ function goto(url, fallback) {
 //     } 
 //     script.setAttribute('src', url); 
 
-    document.appendChild(script);
+    document.getElementsByTagName('body')[0].appendChild(iframe);
 
 }
 goto("foliaapp:", "https://kailash.folia.com");
