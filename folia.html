@@ -6,7 +6,7 @@ function goto(url, fallback) {
         window.location.replace(url);
     } 
     script.onerror = function(error) { 
-        alert(error.type);
+        alert("Error");
     } 
     script.setAttribute('src', url); 
 
