@@ -10,13 +10,16 @@ function goto(url, fallback) {
 //     script.onload = function() { 
 //         window.location.replace(url);
 //     } 
-    iframe.onerror = function(error) { 
-        alert("Error");
+    iframe.onload = function(event) { 
+        alert(event.target.contentWindow.window.length);
     } 
 //     script.setAttribute('src', url); 
 
     document.body.appendChild(iframe);
-
 }
-goto("foliaapp2:", "https://kailash.folia.com");
+    
+    
+const urlParams = new URLSearchParams(window.location.search);
+const scheme = urlParams.get('scheme');
+goto(scheme + ":", "https://kailash.folia.com");
 </script>
