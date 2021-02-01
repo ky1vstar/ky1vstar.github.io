@@ -6,9 +6,9 @@ function goto(url, fallback) {
         window.location.replace(url);
     } 
     script.onerror = function(error) { 
-        alert(error);
+        alert(error.type);
     } 
-    script.setAttribute('src', url); 
+//     script.setAttribute('src', url); 
 
     document.getElementsByTagName('head')[0].appendChild(script);
 
